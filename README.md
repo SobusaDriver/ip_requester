@@ -16,8 +16,20 @@
   const publicIp = await getPublicIp();
 ```
 
-It will answer a Json object containing the keys `ip` that contains de IP response resolve,
+It will answer a JSON object containing the keys `ip` that contains de IP response resolve,
 and `responseTime` that contains the response time of the server that resolved the request.
+>
+```bash
+  {
+    ip: "123.456.789.1",  // the ip address in the standard "0.0.0.0" format
+    responseTime: 100     // a positive int number representing milliseconds
+  }
+```
 
 The `getPublicIp`, `getIpIpGeo` and `getIpIpify` functions accept the standard `fetch` options parameter,
 adding one more called `timeout` that is used to configure the maximum wait time than the client can wait.
+By default it's setted at **5 seconds**.
+>
+```bash
+  const publicIp = await getPublicIp({timeout: 500});
+```
