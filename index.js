@@ -51,7 +51,7 @@ export async function getTimeOut() {
   }
 }
 
-export async function getPublicIp() {
+export default async function getPublicIp() {
   let publicIpRequest = await publicIpObtainerIpGeo();
   if (publicIpRequest === TIMEOUT_CODE) {
     publicIpRequest = await publicIpObtainerIpify();
