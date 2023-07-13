@@ -1,4 +1,4 @@
-import { TIMEOUT_LENGTH } from "../constants";
+import { TIMEOUT_LENGTH } from "../constants.js";
 export default async function fetchWithTimeout(resource, options = {}) {
   const { timeout = TIMEOUT_LENGTH } = options;
 

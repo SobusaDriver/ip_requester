@@ -1,5 +1,5 @@
-import { IPGEO_URL, IPIFY_URL, TIMEOUT_GOOGLE_URL } from "../constants";
-import fetchWithTimeout from "./customFetch/customFetch";
+import { IPGEO_URL, IPIFY_URL, TIMEOUT_GOOGLE_URL } from "../constants.js";
+import fetchWithTimeout from "./customFetch.js";
 export async function publicIpObtainerIpify() {
   try {
     let timeStamp = Date.now();
