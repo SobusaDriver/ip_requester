@@ -25,14 +25,14 @@ It will answer a JSON object containing the following keys:\
 >
 ```bash
   {
-    ip: "123.456.789.1",    // a string with the ip address in the standard "0.0.0.0" format.
+    ip: "123.456.789.1",    // a string with the ip address in IPv4 format.
     responseTime: 100,      // a positive int number representing milliseconds.
     service: "SERVICE_URL"  // a string with the url of the first responder service.
   }
 ```
 
-The `getPublicIp`, `getIpIpGeo` and `getIpIpify` functions accept the standard `fetch` options parameter,
-adding one more called `timeout` that is used to configure the maximum wait time than the client can wait.
+The `getPublicIp`, `getIpgeo`, `getIpify` and `getIpconfig` functions accept the standard fetch `options` parameter,
+adding one more called `timeout` that is used to configure the maximum amount of time in milliseconds the client will wait.
 By default it's set at **5 seconds** (5000ms).
 >
 ```bash

@@ -1,6 +1,6 @@
-import { getIpIpGeo, getIpIpify } from "./ipGetters.js";
+import { getIpgeo, getIpify, getIpconfig } from "./ipGetters.js";
 
 export default async function getPublicIp(options = {}) {
-  const publicIp = await Promise.any([getIpIpGeo(options), getIpIpify(options)]);
+  const publicIp = await Promise.any([getIpgeo(options), getIpify(options), getIpconfig(options)]);
   return publicIp;
 }
