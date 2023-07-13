@@ -9,7 +9,7 @@
 ```
 
 ### After that, import
-
+>
 ```bash
-  import { getPublicIp, publicIpObtainerIpGeo, publicIpObtainerIpify } from "ip_requester"
+  import { getPublicIp, getIpIpGeo, getIpIpify } from "ip_requester"
 ```

@@ -1,6 +1,6 @@
 import { IPGEO_URL, IPIFY_URL, TIMEOUT_GOOGLE_URL } from "../constants.js";
 import fetchWithTimeout from "./customFetch.js";
-export async function publicIpObtainerIpify() {
+export async function getIpIpify() {
   try {
     let timeStamp = Date.now();
     const response = await fetchWithTimeout(IPIFY_URL);
@@ -13,7 +13,7 @@ export async function publicIpObtainerIpify() {
 
 }
 
-export async function publicIpObtainerIpGeo() {
+export async function getIpIpGeo() {
   try {
     let timeStamp = Date.now();
     const rawIpValueipGeo = await fetchWithTimeout(IPGEO_URL)

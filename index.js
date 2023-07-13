@@ -1,4 +1,4 @@
 import getPublicIp from "./library/getPublicIp.js";
-import { publicIpObtainerIpGeo, publicIpObtainerIpify } from "./library/ipGetters.js";
+import { getIpIpGeo, getIpIpify } from "./library/ipGetters.js";
 
-export default { getPublicIp, publicIpObtainerIpGeo, publicIpObtainerIpify }
+export default { getPublicIp, getIpIpGeo, getIpIpify }
