@@ -6,7 +6,7 @@ export async function getIpIpify(options = {}) {
     const response = await fetchWithTimeout(IPIFY_URL, options);
     const parsedResponse = await response.text();
     let timeStampEnd = Date.now();
-    return { "ip": parsedResponse, "responseTime": timeStampEnd - timeStamp };
+    return { "ip": parsedResponse, "responseTime": timeStampEnd - timeStamp, "service": IPIFY_URL };
   } catch (err) {
     return err.message;
   }
@@ -19,7 +19,7 @@ export async function getIpIpGeo(options = {}) {
     const rawIpValueipGeo = await fetchWithTimeout(IPGEO_URL, options)
     let timeStampEnd = Date.now();
     const ipValue = await rawIpValueipGeo.json();
-    return { "ip": ipValue.ip, "responseTime": timeStampEnd - timeStamp };
+    return { "ip": ipValue.ip, "responseTime": timeStampEnd - timeStamp, "service": IPGEO_URL };
   } catch (err) {
     return err.message;
   }
