@@ -6,9 +6,5 @@
   "license": "MIT",
   "scripts": {
     "start": "node index.js"
-  },
-  "dependencies": {
-    "ipify": "^6.0.0",
-    "react-native-public-ip": "^1.0.2"
   }
 }
