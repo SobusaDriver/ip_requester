@@ -31,7 +31,7 @@ It will answer a JSON object containing the following keys:
 
 The `getPublicIp`, `getIpIpGeo` and `getIpIpify` functions accept the standard `fetch` options parameter,
 adding one more called `timeout` that is used to configure the maximum wait time than the client can wait.
-By default it's set at **5 seconds**.
+By default it's set at **5 seconds** (5000ms).
 >
 ```bash
   const publicIp = await getPublicIp({timeout: 500});
