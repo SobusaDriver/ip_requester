@@ -21,7 +21,7 @@ It is a simple and minimalistic service that responds your current public IP add
 It will answer a JSON object containing the following keys:\
 `ip`            Contains de IP response resolve.\
 `responseTime`  Contains the response time of the server that resolved the request.\
-`service`       Contains the `URL` value of te service that fullfilled the request.\
+`service`       Contains the `url` value of te service that fullfilled the request.\
 >
 ```bash
   {
