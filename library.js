@@ -1,4 +1,20 @@
-import { IPGEO_URL, IPIFY_URL, TIMEOUT_CODE } from "./CONST.js";
+import { IPGEO_URL, IPIFY_URL, TIMEOUT_CODE, TIMEOUT_LENGTH } from "./constants.js";
+
+
+async function fetchWithTimeout(resource, options = {}) {
+  const { timeout = TIMEOUT_LENGTH } = options;
+
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+
+  const response = await fetch(resource, {
+    ...options,
+    signal: controller.signal
+  });
+  clearTimeout(id);
+
+  return response;
+}
 
 export async function publicIpObtainerIpify() {
   try {
@@ -34,21 +50,6 @@ export async function getTimeOut() {
   } catch (err) {
     return err.message;
   }
-}
-
-async function fetchWithTimeout(resource, options = {}) {
-  const { timeout = 5000 } = options;
-
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), timeout);
-
-  const response = await fetch(resource, {
-    ...options,
-    signal: controller.signal
-  });
-  clearTimeout(id);
-
-  return response;
 }
 
 export async function getPublicIp() {
