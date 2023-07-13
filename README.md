@@ -1,5 +1,7 @@
 # IP Requester
 
+It is a simple and minimalistic service that responds to your current public IP address based only on external APIs, with no need for external dependencies or libraries, extremely lightweight and customizable.
+
 ## How To Use
 
 ### First, Install
@@ -11,21 +13,21 @@
 ### After that, import
 >
 ```bash
-  import { getPublicIp, getIpIpGeo, getIpIpify } from "ip_requester";
+  import { getPublicIp } from "ip_requester";
 
   const publicIp = await getPublicIp();
 ```
 
-It will answer a JSON object containing the following keys:
-`ip` that contains de IP response resolve,
-`responseTime` that contains the response time of the server that resolved the request,
-`service` that contains the `URL` value of te service that fullfilled the request.
+It will answer a JSON object containing the following keys:\
+`ip`  Contains de IP response resolve.\
+`responseTime` Contains the response time of the server that resolved the request.\
+`service` Contains the `URL` value of te service that fullfilled the request.\
 >
 ```bash
   {
-    ip: "123.456.789.1",    // the ip address in the standard "0.0.0.0" format
-    responseTime: 100,      // a positive int number representing milliseconds
-    service: "SERVICE_URL"  // the url of the first responder service
+    ip: "123.456.789.1",    // a string with the ip address in the standard "0.0.0.0" format.
+    responseTime: 100,      // a positive int number representing milliseconds.
+    service: "SERVICE_URL"  // a string the url of the first responder service.
   }
 ```
 
@@ -34,5 +36,5 @@ adding one more called `timeout` that is used to configure the maximum wait time
 By default it's set at **5 seconds** (5000ms).
 >
 ```bash
-  const publicIp = await getPublicIp({timeout: 500});
+  const publicIp = await getPublicIp({timeout: 5000});
 ```
