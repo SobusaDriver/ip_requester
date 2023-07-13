@@ -1,6 +1,6 @@
 # IP Requester
 
-It is a simple and minimalistic service that responds to your current public IP address based only on external APIs, with no need for external dependencies or libraries, extremely lightweight and customizable.
+It is a simple and minimalistic service that responds your current public IP address based only on external APIs, with no need for external dependencies or libraries, extremely lightweight and customizable.
 
 ## How To Use
 
@@ -19,9 +19,9 @@ It is a simple and minimalistic service that responds to your current public IP 
 ```
 
 It will answer a JSON object containing the following keys:\
-`ip`  Contains de IP response resolve.\
-`responseTime` Contains the response time of the server that resolved the request.\
-`service` Contains the `URL` value of te service that fullfilled the request.\
+`ip`            Contains de IP response resolve.\
+`responseTime`  Contains the response time of the server that resolved the request.\
+`service`       Contains the `URL` value of te service that fullfilled the request.\
 >
 ```bash
   {
