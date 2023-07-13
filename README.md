@@ -27,7 +27,7 @@ It will answer a JSON object containing the following keys:\
   {
     ip: "123.456.789.1",    // a string with the ip address in the standard "0.0.0.0" format.
     responseTime: 100,      // a positive int number representing milliseconds.
-    service: "SERVICE_URL"  // a string the url of the first responder service.
+    service: "SERVICE_URL"  // a string with the url of the first responder service.
   }
 ```
 
