@@ -33,8 +33,18 @@ It will answer a JSON object containing the following keys:\
 
 The `getPublicIp`, `getIpgeo`, `getIpify` and `getIpconfig` functions accept the standard fetch `options` parameter,
 adding one more called `timeout` that is used to configure the maximum amount of time in milliseconds the client will wait.
-By default it's set at **5 seconds** (5000ms).
+By default it's set at **1 seconds** (1000ms).
 >
 ```bash
-  const publicIp = await getPublicIp({timeout: 5000});
+  const publicIp = await getPublicIp({timeout: 1000});    // 1 second timeout.
+```
+
+You can also use individual services by importing them separately and passing options as needed for each one.<|
+>
+```bash
+  import { getIpgeo, getIpify, getIpConfig} from "ip_requester";
+
+  cont ipgeoIp = await getIpgeo({timeout: 500});        // 500 miliseconds timeout.
+  const ipifyIp = await getIpify({timeout: 1000});      // 1000 miliseconds timeout.
+  const ipconfigIp = await getIpconfig({timeout: 200}); // 200 miliseconds timeout.
 ```
