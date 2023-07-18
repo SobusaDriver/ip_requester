@@ -21,7 +21,7 @@ It is a simple and minimalistic service that responds your current public IP add
 It will answer a JSON object containing the following keys:\
 `ip`            Contains de IP response resolve.\
 `responseTime`  Contains the response time of the server that resolved the request.\
-`service`       Contains the `url` value of te service that fullfilled the request.\
+`service`       Contains the `url` value of te service that fullfilled the request.
 >
 ```bash
   {
@@ -39,7 +39,7 @@ By default it's set at **1 seconds** (1000ms).
   const publicIp = await getPublicIp({timeout: 1000});    // 1 second timeout.
 ```
 
-You can also use individual services by importing them separately and passing options as needed for each one.<|
+You can also use individual services by importing them separately and passing options as needed for each one.
 >
 ```bash
   import { getIpgeo, getIpify, getIpConfig} from "ip_requester";
